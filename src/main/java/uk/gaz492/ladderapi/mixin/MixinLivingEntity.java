@@ -13,7 +13,7 @@ import uk.gaz492.ladderapi.LadderAPI;
 @Mixin(LivingEntity.class)
 public abstract class MixinLivingEntity {
 
-	@Inject(method = "canClimb", at = @At(value = "RETURN", ordinal = 2), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
+	@Inject(method = "isClimbing", at = @At(value = "RETURN", ordinal = 2), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
 	public void canClimb(CallbackInfoReturnable<Boolean> cir, final BlockState state, final Block block) {
 		if (block.matches(LadderAPI.CLIMBABLE)) {
 			cir.setReturnValue(true);

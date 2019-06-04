@@ -1,0 +1,16 @@
+{
+  "id": "ladderapi",
+  "name": "Ladder API",
+  "description": "This is an api that adds ladders, ladder API!!!!",
+  "version": "${version}",
+  "side": "universal",
+  "initializers": [
+    "uk.gaz492.ladderapi.LadderAPI"
+  ],
+  "requires": {
+    "fabric": "*"
+  },
+  "mixins": {
+    "common": "ladderapi.common.json"
+  }
+}
