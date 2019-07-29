@@ -1,16 +1,33 @@
+
 {
+  "schemaVersion": 1,
   "id": "ladderapi",
+  "version": "${version}",
+
   "name": "Ladder API",
   "description": "This is an api that adds ladders, ladder API!!!!",
-  "version": "${version}",
-  "side": "universal",
-  "initializers": [
-    "uk.gaz492.ladderapi.LadderAPI"
+  "authors": [
+    "Gaz"
   ],
-  "requires": {
-    "fabric": "*"
+  "contact": {
+    "homepage": "https://github.com/gaz492/ladder-api",
+    "sources": "https://github.com/gaz492/ladder-api"
   },
-  "mixins": {
-    "common": "ladderapi.common.json"
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "uk.gaz492.ladderapi.LadderAPI"
+    ]
+  },
+  "mixins": [
+    "ladderapi.common.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.4.0"
   }
 }
