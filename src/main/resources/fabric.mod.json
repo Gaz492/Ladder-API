@@ -24,7 +24,7 @@
     ]
   },
   "mixins": [
-    "ladderapi.common.json"
+    "ladderapi.mixins.json"
   ],
 
   "depends": {
