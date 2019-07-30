@@ -2,6 +2,8 @@ package uk.gaz492.ladderapi;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.tag.TagRegistry;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.minecraft.block.Block;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
@@ -12,6 +14,7 @@ public class LadderAPI implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        System.out.println("Initiated Ladder API!");
+        ModMetadata metadata = FabricLoader.getInstance().getModContainer("ladderapi").get().getMetadata();
+        System.out.println("Initiated Ladder API("+ metadata.getVersion() +")!");
     }
 }
